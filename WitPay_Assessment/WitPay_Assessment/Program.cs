@@ -1,6 +1,8 @@
 using WitPay_Assessment.Data;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
+using WitPay_Assessment.Repository;
+using WitPay_Assessment.Entity;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -18,7 +20,8 @@ builder.Services.AddControllers()
         options.JsonSerializerOptions.ReferenceHandler =
             System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
     });
-
+builder.Services.AddScoped<IPizzaRepository<Pizza>, PizzaRepository>();
+builder.Services.AddScoped<IToppingsRepository<Toppings>, ToppingsRepository>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

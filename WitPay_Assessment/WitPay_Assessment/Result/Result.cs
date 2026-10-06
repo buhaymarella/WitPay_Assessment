@@ -1,4 +1,4 @@
-﻿namespace WitPay_Assessment.Result
+﻿namespace WitPay_Assessment
 {
     public class Result
     {

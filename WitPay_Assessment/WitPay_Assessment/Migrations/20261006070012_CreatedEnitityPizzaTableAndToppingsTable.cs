@@ -48,9 +48,7 @@ namespace WitPay_Assessment.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     PizzasId = table.Column<int>(type: "int", nullable: false),
-                    ToppingsId = table.Column<int>(type: "int", nullable: false),
-                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    UpdatedDate = table.Column<DateTime>(type: "datetime2", nullable: true)
+                    ToppingsId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
